@@ -25,7 +25,30 @@ body {
   background-size: 24px 24px;
 }
 
+.hero-ai-grid {
+  background-image:
+    linear-gradient(rgba(38, 112, 127, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3, 67, 84, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 88%);
+  animation: hero-grid-drift 18s linear infinite;
+}
+
+@keyframes hero-grid-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(56px, 28px, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-ai-grid {
+    animation: none;
+  }
+
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
