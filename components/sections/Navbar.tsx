@@ -20,20 +20,23 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <header className={`fixed inset-x-0 top-0 z-50 pt-4 transition-all ${scrolled ? 'px-0' : 'px-4'}`}>
       <div
-        className={`section-container rounded-2xl border transition-all ${
-          scrolled || open ? 'border-slate-200 bg-white/95 shadow-soft backdrop-blur' : 'border-transparent bg-transparent'
+        className={`transition-all ${
+          scrolled || open
+            ? 'mx-0 w-full rounded-none border-y border-white/35 bg-white/45 px-6 shadow-soft backdrop-blur-xl md:px-10'
+            : 'section-container rounded-2xl border border-transparent bg-transparent'
         }`}
       >
-        <nav className="flex items-center justify-between gap-4 py-3 md:py-4">
-          <Link href="/" className="flex min-w-0 items-center">
+        <nav className="flex min-h-[5rem] items-center justify-between gap-4 py-3 md:min-h-[5.5rem] md:py-4">
+          <Link href="/" className="flex min-w-0 flex-1 items-center md:flex-none">
             <Image
               src="/logo-wordmark.svg"
               alt="Ninja Digital Innovations logo"
-              width={320}
-              height={90}
-              className="h-11 w-auto sm:h-12 md:h-14"
+              width={360}
+              height={102}
+              sizes="(max-width: 768px) 220px, 360px"
+              className="h-12 w-auto max-w-[13.5rem] object-contain sm:h-14 sm:max-w-[15rem] md:h-16 md:max-w-[18rem]"
               priority
             />
           </Link>
@@ -51,7 +54,7 @@ export function Navbar() {
           <button
             aria-label="Open menu"
             aria-expanded={open}
-            className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white/90 p-2 text-slate-700 shadow-soft md:hidden"
+            className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/55 p-2 text-slate-700 shadow-soft backdrop-blur md:hidden"
             onClick={() => setOpen((prev) => !prev)}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -64,7 +67,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="section-container mt-2 rounded-2xl border border-slate-200 bg-white/95 p-5 shadow-soft backdrop-blur md:hidden"
+            className="mx-4 mt-2 rounded-2xl border border-white/40 bg-white/55 p-5 shadow-soft backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
