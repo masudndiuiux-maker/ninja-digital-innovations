@@ -23,7 +23,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <div
         className={`section-container rounded-2xl border transition-all ${
-          scrolled || open ? 'border-slate-200 bg-white/95 shadow-soft backdrop-blur' : 'border-transparent bg-transparent'
+          scrolled || open ? 'border-white/40 bg-white/55 shadow-soft backdrop-blur-xl' : 'border-transparent bg-transparent'
         }`}
       >
         <nav className="flex items-center justify-between gap-4 py-3 md:py-4">
@@ -51,7 +51,7 @@ export function Navbar() {
           <button
             aria-label="Open menu"
             aria-expanded={open}
-            className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white/90 p-2 text-slate-700 shadow-soft md:hidden"
+            className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/60 p-2 text-slate-700 shadow-soft backdrop-blur md:hidden"
             onClick={() => setOpen((prev) => !prev)}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -64,7 +64,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="section-container mt-2 rounded-2xl border border-slate-200 bg-white/95 p-5 shadow-soft backdrop-blur md:hidden"
+            className="section-container mt-2 rounded-2xl border border-white/40 bg-white/60 p-5 shadow-soft backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
