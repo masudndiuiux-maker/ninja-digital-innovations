@@ -29,7 +29,7 @@ export function Navbar() {
               alt="Ninja Digital Innovations logo"
               width={260}
               height={64}
-              className="h-12 w-auto"
+              className="h-9 w-auto"
               priority
             />
           </Link>
