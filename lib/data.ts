@@ -1,17 +1,18 @@
-import {
-  AppWindow,
-  Bot,
-  Cloud,
-  Cog,
-  LayoutPanelTop,
-  Smartphone,
-  TrendingUp,
-  Users,
-  ShieldCheck,
-  Workflow,
-  Rocket,
-  Gauge
-} from 'lucide-react';
+export type ServiceIconName =
+  | 'AppWindow'
+  | 'Smartphone'
+  | 'LayoutPanelTop'
+  | 'Bot'
+  | 'Cloud'
+  | 'Cog';
+
+export type ValueIconName =
+  | 'TrendingUp'
+  | 'Users'
+  | 'Workflow'
+  | 'ShieldCheck'
+  | 'Gauge'
+  | 'Rocket';
 
 export const navLinks = ['Home', 'Services', 'Solutions', 'About', 'Portfolio', 'Contact'];
 
@@ -26,43 +27,43 @@ export const services = [
   {
     title: 'Web Development',
     description: 'Fast, secure, conversion-focused websites and web apps built for scale.',
-    icon: AppWindow
+    icon: 'AppWindow'
   },
   {
     title: 'Mobile App Development',
     description: 'Native and cross-platform mobile products with exceptional UX and performance.',
-    icon: Smartphone
+    icon: 'Smartphone'
   },
   {
     title: 'UI/UX Design',
     description: 'Elegant product experiences shaped by user behavior, business goals, and clarity.',
-    icon: LayoutPanelTop
+    icon: 'LayoutPanelTop'
   },
   {
     title: 'AI & Automation',
     description: 'Workflow automation, AI copilots, and intelligent systems that reduce overhead.',
-    icon: Bot
+    icon: 'Bot'
   },
   {
     title: 'Cloud & DevOps',
     description: 'Reliable cloud architecture, CI/CD pipelines, and observability built into delivery.',
-    icon: Cloud
+    icon: 'Cloud'
   },
   {
     title: 'Digital Consulting',
     description: 'Roadmaps and strategic direction for enterprise modernization and growth.',
-    icon: Cog
+    icon: 'Cog'
   }
-];
+] satisfies Array<{ title: string; description: string; icon: ServiceIconName }>;
 
 export const values = [
-  { title: 'Innovation-Driven', description: 'We combine proven engineering with forward-thinking strategy.', icon: TrendingUp },
-  { title: 'User-Centric Design', description: 'Every feature is grounded in customer behavior and usability.', icon: Users },
-  { title: 'Scalable Architecture', description: 'Solutions engineered to grow with your products and teams.', icon: Workflow },
-  { title: 'Reliable Delivery', description: 'Transparent milestones, quality assurance, and predictable execution.', icon: ShieldCheck },
-  { title: 'Business Outcomes', description: 'Our teams focus on measurable ROI, retention, and conversion.', icon: Gauge },
-  { title: 'Long-Term Partnership', description: 'We operate as an extension of your organization and vision.', icon: Rocket }
-];
+  { title: 'Innovation-Driven', description: 'We combine proven engineering with forward-thinking strategy.', icon: 'TrendingUp' },
+  { title: 'User-Centric Design', description: 'Every feature is grounded in customer behavior and usability.', icon: 'Users' },
+  { title: 'Scalable Architecture', description: 'Solutions engineered to grow with your products and teams.', icon: 'Workflow' },
+  { title: 'Reliable Delivery', description: 'Transparent milestones, quality assurance, and predictable execution.', icon: 'ShieldCheck' },
+  { title: 'Business Outcomes', description: 'Our teams focus on measurable ROI, retention, and conversion.', icon: 'Gauge' },
+  { title: 'Long-Term Partnership', description: 'We operate as an extension of your organization and vision.', icon: 'Rocket' }
+] satisfies Array<{ title: string; description: string; icon: ValueIconName }>;
 
 export const processSteps = [
   { title: 'Discover', description: 'Align goals, users, data, and technical constraints.' },

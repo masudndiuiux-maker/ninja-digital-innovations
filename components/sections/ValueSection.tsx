@@ -1,8 +1,18 @@
 'use client';
 
+import { Gauge, Rocket, ShieldCheck, TrendingUp, Users, Workflow } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { values } from '@/lib/data';
+import { values, type ValueIconName } from '@/lib/data';
 import { motion } from 'framer-motion';
+
+const valueIcons: Record<ValueIconName, typeof TrendingUp> = {
+  TrendingUp,
+  Users,
+  Workflow,
+  ShieldCheck,
+  Gauge,
+  Rocket
+};
 
 export function ValueSection() {
   return (
@@ -15,7 +25,7 @@ export function ValueSection() {
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {values.map((value, idx) => {
-            const Icon = value.icon;
+            const Icon = valueIcons[value.icon];
             return (
               <motion.div
                 key={value.title}

@@ -1,8 +1,25 @@
 'use client';
 
-import { services } from '@/lib/data';
+import {
+  AppWindow,
+  Bot,
+  Cloud,
+  Cog,
+  LayoutPanelTop,
+  Smartphone
+} from 'lucide-react';
+import { services, type ServiceIconName } from '@/lib/data';
 import { AnimatedCard } from '@/components/ui/AnimatedCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+
+const serviceIcons: Record<ServiceIconName, typeof AppWindow> = {
+  AppWindow,
+  Smartphone,
+  LayoutPanelTop,
+  Bot,
+  Cloud,
+  Cog
+};
 
 export function ServicesGrid() {
   return (
@@ -16,7 +33,7 @@ export function ServicesGrid() {
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, i) => {
-            const Icon = service.icon;
+            const Icon = serviceIcons[service.icon];
             return (
               <AnimatedCard key={service.title} delay={i * 0.08} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-soft transition hover:border-brand-400/60">
                 <div className="mb-5 inline-flex rounded-2xl bg-brand-gradient p-3 text-white">
