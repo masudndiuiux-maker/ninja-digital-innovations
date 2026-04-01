@@ -23,9 +23,15 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <div className={`section-container rounded-2xl border transition-all ${scrolled ? 'border-slate-200 bg-white/90 shadow-soft backdrop-blur' : 'border-transparent bg-transparent'}`}>
         <nav className="flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-3 font-display text-lg font-bold text-slate-900">
-            <Image src="/logo-mark.svg" alt="Ninja Digital logo" width={40} height={40} className="h-10 w-10" priority />
-            <span>Ninja Digital</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo-wordmark.svg"
+              alt="Ninja Digital Innovations logo"
+              width={260}
+              height={64}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
