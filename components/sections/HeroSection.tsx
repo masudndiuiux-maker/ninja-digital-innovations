@@ -24,7 +24,9 @@ export function HeroSection() {
         <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-400">Digital Innovation Studio</p>
           <h1 className="font-display text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
-            Premium Software Experiences Built for Growth and Trust.
+            Ninja Digital Innovations
+            <br />
+            Pioneering the Future with AI and Human Collaboration
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
             We partner with ambitious teams to design, engineer, and scale high-performing digital products across web, mobile, AI, and cloud.
