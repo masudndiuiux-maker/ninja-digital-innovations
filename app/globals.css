@@ -2,54 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
+  @apply bg-zinc-50 text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-100;
+  font-family: var(--font-inter), sans-serif;
 }
 
-.section-container {
-  @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-manrope), sans-serif;
+  letter-spacing: -0.02em;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-}
-
-.noise-overlay {
-  background-image: radial-gradient(circle at 1px 1px, rgba(71, 85, 105, 0.12) 1px, transparent 0);
-  background-size: 24px 24px;
-}
-
-.hero-ai-grid {
-  background-image:
-    linear-gradient(rgba(38, 112, 127, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(3, 67, 84, 0.08) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 88%);
-  animation: hero-grid-drift 18s linear infinite;
-}
-
-@keyframes hero-grid-drift {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(56px, 28px, 0);
-  }
+::selection {
+  @apply bg-sky-200 text-zinc-900 dark:bg-sky-800 dark:text-white;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-ai-grid {
-    animation: none;
-  }
-
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
