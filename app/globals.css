@@ -25,27 +25,29 @@ body {
   background-size: 24px 24px;
 }
 
-.hero-ai-grid {
+.hero-water-ripples {
   background-image:
-    linear-gradient(rgba(38, 112, 127, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(3, 67, 84, 0.08) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 88%);
-  animation: hero-grid-drift 18s linear infinite;
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.18) 0, rgba(255, 255, 255, 0.18) 2px, transparent 3px, transparent 20%),
+    radial-gradient(circle at 76% 30%, rgba(38, 112, 127, 0.12) 0, rgba(38, 112, 127, 0.12) 2px, transparent 3px, transparent 18%),
+    radial-gradient(circle at 42% 68%, rgba(3, 67, 84, 0.1) 0, rgba(3, 67, 84, 0.1) 2px, transparent 3px, transparent 22%);
+  background-size: 28rem 28rem, 32rem 32rem, 26rem 26rem;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.78), transparent 92%);
+  animation: hero-water-drift 16s ease-in-out infinite alternate;
 }
 
-@keyframes hero-grid-drift {
+@keyframes hero-water-drift {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
   }
 
   to {
-    transform: translate3d(56px, 28px, 0);
+    transform: translate3d(1.5%, 1.5%, 0) scale(1.04);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-ai-grid {
+  .hero-water-ripples {
     animation: none;
   }
 
