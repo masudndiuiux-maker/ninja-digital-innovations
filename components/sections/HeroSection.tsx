@@ -6,9 +6,7 @@ import { StatsStrip } from '@/components/sections/StatsStrip';
 export function HeroSection() {
   return (
     <section id="home" className="relative overflow-hidden pt-40">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#034354]/15 via-transparent to-[#26707F]/20" />
-      <div className="absolute -top-20 right-10 -z-10 h-56 w-56 rounded-full bg-brand-400/30 blur-3xl" />
-      <div className="absolute left-0 top-10 -z-10 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(38,112,127,0.18),_transparent_28%),radial-gradient(circle_at_top_left,_rgba(3,67,84,0.14),_transparent_34%),linear-gradient(135deg,rgba(3,67,84,0.12),transparent_48%,rgba(38,112,127,0.16))]" />
       <div className="section-container pb-16">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-400">Digital Innovation Studio</p>
