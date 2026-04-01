@@ -23,9 +23,7 @@ export function ContactForm() {
           <div className="mt-8 space-y-3 text-slate-600">
             <p>hello@ninjadigitalinnovations.com</p>
             <p>+1 (555) 010-2048</p>
-            <p>
-              27 Shaptak Square, <strong>27 Dhanmondi, Dhaka</strong> • Remote Global Delivery
-            </p>
+            <p>27 Shaptak Square, 27 Dhanmondi, Dhaka • Remote Global Delivery</p>
           </div>
         </div>
 
