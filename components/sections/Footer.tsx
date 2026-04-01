@@ -3,7 +3,7 @@ import Link from 'next/link';
 const footerLinks = {
   Services: ['Web Development', 'Mobile Apps', 'AI Automation', 'Cloud Engineering'],
   Company: ['About', 'Careers', 'Insights', 'Contact'],
-  Contact: ['hello@ninjadigitalinnovations.com', '+1 (555) 010-2048', 'New York, USA']
+  Contact: ['hello@ninjadigitalinnovations.com', '+1 (555) 010-2048', '27 Shaptak Square, 27 Dhanmondi, Dhaka']
 };
 
 export function Footer() {
