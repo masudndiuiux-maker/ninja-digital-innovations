@@ -6,14 +6,14 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
 
 export const metadata: Metadata = {
-  title: 'Masud Rana | UI/UX Designer Portfolio',
+  title: 'Ninja Digital Innovations | Premium Software & Digital Transformation',
   description:
-    'Portfolio of Masud Rana, a UI/UX designer crafting intuitive and meaningful digital experiences with Japanese-inspired precision.'
+    'Ninja Digital Innovations designs and develops premium web, mobile, AI, and cloud solutions for modern businesses.'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
     </html>
   );
