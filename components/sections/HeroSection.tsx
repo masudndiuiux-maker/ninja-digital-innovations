@@ -26,7 +26,7 @@ export function HeroSection() {
           <h1 className="font-display text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
             Ninja Digital Innovations
             <br />
-            <span className="block pt-6 text-brand-500">
+            <span className="block pt-4 sm:pt-5 md:pt-6 text-brand-500">
               Pioneering the Future with AI
               <br />
               and Human Collaboration
