@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { projects } from '@/lib/data';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
@@ -26,7 +27,15 @@ export function PortfolioGrid() {
               className="group overflow-hidden rounded-3xl border border-slate-200 bg-slate-50"
             >
               <div className="relative h-52 overflow-hidden bg-gradient-to-br from-brand-500 to-brand-400">
-                <motion.div whileHover={{ scale: 1.05 }} className="absolute inset-0 opacity-60 noise-overlay" />
+                <Image
+                  src={project.image}
+                  alt={project.imageAlt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-transparent" />
+                <motion.div whileHover={{ scale: 1.05 }} className="absolute inset-0 opacity-30 noise-overlay" />
                 <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700">{project.category}</div>
               </div>
               <div className="p-6">

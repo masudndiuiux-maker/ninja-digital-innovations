@@ -74,10 +74,42 @@ export const processSteps = [
 ];
 
 export const projects = [
-  { title: 'FinFlow Platform', category: 'SaaS', metric: '+38% conversion', summary: 'Rebuilt onboarding and dashboard experiences for a fintech product.' },
-  { title: 'MedLink Care', category: 'Healthcare', metric: '-42% response time', summary: 'Developed secure patient portals and AI-assisted support workflows.' },
-  { title: 'RetailSync AI', category: 'Ecommerce', metric: '+24% retention', summary: 'Connected data streams with forecasting and automation tools.' },
-  { title: 'OpsPilot Suite', category: 'Enterprise', metric: '3.1x efficiency', summary: 'Unified operations stack with role-based interfaces and analytics.' }
+  {
+    title: 'FinFlow Platform',
+    category: 'SaaS',
+    metric: '+38% conversion',
+    summary: 'Rebuilt onboarding and dashboard experiences for a fintech product.',
+    image:
+      'https://images.pexels.com/photos/7109316/pexels-photo-7109316.jpeg?cs=srgb&dl=pexels-tiger-lily-7109316.jpg&fm=jpg',
+    imageAlt: 'Laptop displaying financial graphs and analytics on a desk.'
+  },
+  {
+    title: 'MedLink Care',
+    category: 'Healthcare',
+    metric: '-42% response time',
+    summary: 'Developed secure patient portals and AI-assisted support workflows.',
+    image:
+      'https://images.pexels.com/photos/5407243/pexels-photo-5407243.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5407243.jpg&fm=jpg',
+    imageAlt: 'Doctor working on a laptop in a healthcare setting.'
+  },
+  {
+    title: 'RetailSync AI',
+    category: 'Ecommerce',
+    metric: '+24% retention',
+    summary: 'Connected data streams with forecasting and automation tools.',
+    image:
+      'https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?cs=srgb&dl=pexels-maorattias-5156696.jpg&fm=jpg',
+    imageAlt: 'Warehouse shelves filled with packages for ecommerce fulfillment.'
+  },
+  {
+    title: 'OpsPilot Suite',
+    category: 'Enterprise',
+    metric: '3.1x efficiency',
+    summary: 'Unified operations stack with role-based interfaces and analytics.',
+    image:
+      'https://images.pexels.com/photos/7693686/pexels-photo-7693686.jpeg?cs=srgb&dl=pexels-yankrukov-7693686.jpg&fm=jpg',
+    imageAlt: 'Team reviewing charts and digital business data in an office.'
+  }
 ];
 
 export const testimonials = [
