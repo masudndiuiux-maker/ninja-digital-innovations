@@ -10,7 +10,7 @@ export function HeroSection() {
   return (
     <section id="home" className="relative overflow-hidden pt-40">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(38,112,127,0.18),_transparent_28%),radial-gradient(circle_at_top_left,_rgba(3,67,84,0.14),_transparent_34%),linear-gradient(135deg,rgba(3,67,84,0.12),transparent_48%,rgba(38,112,127,0.16))]" />
-      <div className="hero-water-ripples absolute inset-0 -z-10 opacity-80" />
+      <div className="hero-ai-grid absolute inset-0 -z-10 opacity-70" />
       <motion.div
         aria-hidden="true"
         animate={
@@ -23,32 +23,6 @@ export function HeroSection() {
         }
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         className="pointer-events-none absolute inset-x-[-10%] top-[-12%] -z-10 h-[34rem] rounded-full bg-[radial-gradient(circle,_rgba(38,112,127,0.22),_transparent_62%)]"
-      />
-      <motion.div
-        aria-hidden="true"
-        animate={
-          reduce
-            ? undefined
-            : {
-                scale: [0.92, 1.08, 0.92],
-                opacity: [0.1, 0.22, 0.1]
-              }
-        }
-        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        className="pointer-events-none absolute left-[-8%] top-[12%] -z-10 h-80 w-80 rounded-full border border-brand-400/20"
-      />
-      <motion.div
-        aria-hidden="true"
-        animate={
-          reduce
-            ? undefined
-            : {
-                scale: [0.88, 1.12, 0.88],
-                opacity: [0.08, 0.18, 0.08]
-              }
-        }
-        transition={{ duration: 8.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-        className="pointer-events-none absolute right-[-4%] top-[22%] -z-10 h-96 w-96 rounded-full border border-brand-500/15"
       />
       <motion.div
         aria-hidden="true"
