@@ -26,7 +26,7 @@ export function HeroSection() {
           <h1 className="font-display text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
             Ninja Digital Innovations
             <br />
-            Pioneering the Future with AI and Human Collaboration
+            <span className="whitespace-nowrap">Pioneering the Future with AI and Human Collaboration</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
             We partner with ambitious teams to design, engineer, and scale high-performing digital products across web, mobile, AI, and cloud.
