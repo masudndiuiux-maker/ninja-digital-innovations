@@ -15,7 +15,6 @@ export function ProcessTimeline() {
           center
         />
         <div className="relative mx-auto mt-14 max-w-4xl">
-          <div className="absolute left-6 top-2 hidden h-[92%] w-px bg-slate-200 md:block" />
           {processSteps.map((step, i) => (
             <motion.div
               key={step.title}
