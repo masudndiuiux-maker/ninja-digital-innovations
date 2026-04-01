@@ -1,16 +1,21 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
-import { Bot, BrainCircuit, Cpu, Network, Sparkles } from 'lucide-react';
+import { Binary, Bot, BrainCircuit, CircuitBoard, Cpu, Network, Radar, Sparkles, Workflow, Zap } from 'lucide-react';
 import { GradientButton } from '@/components/ui/GradientButton';
 import { StatsStrip } from '@/components/sections/StatsStrip';
 
 const heroIcons = [
-  { Icon: BrainCircuit, className: 'left-[8%] top-28 hidden md:flex', delay: 0 },
-  { Icon: Cpu, className: 'right-[11%] top-32 hidden lg:flex', delay: 1.6 },
-  { Icon: Network, className: 'left-[14%] bottom-32 hidden lg:flex', delay: 0.9 },
-  { Icon: Bot, className: 'right-[16%] bottom-28 hidden md:flex', delay: 2.1 },
-  { Icon: Sparkles, className: 'right-[32%] top-24 hidden xl:flex', delay: 1.2 }
+  { Icon: BrainCircuit, className: 'left-[5%] top-24 hidden sm:flex', delay: 0 },
+  { Icon: Cpu, className: 'right-[8%] top-28 hidden md:flex', delay: 0.9 },
+  { Icon: Network, className: 'left-[10%] top-[48%] hidden lg:flex', delay: 0.4 },
+  { Icon: Bot, className: 'right-[13%] bottom-24 hidden sm:flex', delay: 1.1 },
+  { Icon: Sparkles, className: 'right-[28%] top-20 hidden lg:flex', delay: 0.7 },
+  { Icon: CircuitBoard, className: 'left-[24%] top-16 hidden xl:flex', delay: 1.3 },
+  { Icon: Workflow, className: 'right-[24%] top-[44%] hidden md:flex', delay: 1.8 },
+  { Icon: Binary, className: 'left-[22%] bottom-24 hidden lg:flex', delay: 0.6 },
+  { Icon: Radar, className: 'right-[35%] bottom-20 hidden xl:flex', delay: 1.5 },
+  { Icon: Zap, className: 'left-[40%] top-[18%] hidden md:flex', delay: 0.2 }
 ] as const;
 
 export function HeroSection() {
@@ -55,18 +60,19 @@ export function HeroSection() {
             reduce
               ? undefined
               : {
-                  y: [0, -14, 0],
-                  opacity: [0.3, 0.55, 0.3],
-                  rotate: [0, 4, -4, 0]
+                  x: [0, index % 2 === 0 ? 10 : -10, 0],
+                  y: [0, -18, 0],
+                  opacity: [0.12, 0.24, 0.12],
+                  rotate: [0, 5, -5, 0]
                 }
           }
           transition={{
-            duration: 8 + index,
+            duration: 5.5 + index * 0.45,
             delay,
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-          className={`pointer-events-none absolute -z-10 items-center justify-center rounded-2xl border border-brand-400/20 bg-white/45 p-3 text-brand-500 shadow-soft backdrop-blur ${className}`}
+          className={`pointer-events-none absolute -z-10 items-center justify-center rounded-2xl border border-brand-400/10 bg-white/20 p-3 text-brand-500/70 shadow-soft backdrop-blur-sm ${className}`}
         >
           <Icon className="h-7 w-7" strokeWidth={1.8} />
         </motion.div>
