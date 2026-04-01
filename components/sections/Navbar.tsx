@@ -21,19 +21,23 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <div className={`section-container rounded-2xl border transition-all ${scrolled ? 'border-slate-200 bg-white/90 shadow-soft backdrop-blur' : 'border-transparent bg-transparent'}`}>
-        <nav className="flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center">
+      <div
+        className={`section-container rounded-2xl border transition-all ${
+          scrolled || open ? 'border-slate-200 bg-white/95 shadow-soft backdrop-blur' : 'border-transparent bg-transparent'
+        }`}
+      >
+        <nav className="flex items-center justify-between gap-4 py-3 md:py-4">
+          <Link href="/" className="flex min-w-0 items-center">
             <Image
               src="/logo-wordmark.svg"
               alt="Ninja Digital Innovations logo"
-              width={260}
-              height={64}
-              className="h-9 w-auto"
+              width={320}
+              height={90}
+              className="h-11 w-auto sm:h-12 md:h-14"
               priority
             />
           </Link>
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-6 lg:gap-8 md:flex">
             {navLinks.map((link) => (
               <a key={link} href={`#${link.toLowerCase()}`} className="group relative text-sm font-medium text-slate-600 hover:text-slate-900">
                 {link}
@@ -41,20 +45,35 @@ export function Navbar() {
               </a>
             ))}
           </div>
-          <div className="hidden md:block">
+          <div className="hidden shrink-0 md:block">
             <GradientButton href="#contact">Book a Consultation</GradientButton>
           </div>
-          <button aria-label="Open menu" className="md:hidden" onClick={() => setOpen((prev) => !prev)}>
+          <button
+            aria-label="Open menu"
+            aria-expanded={open}
+            className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white/90 p-2 text-slate-700 shadow-soft md:hidden"
+            onClick={() => setOpen((prev) => !prev)}
+          >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </nav>
       </div>
       <AnimatePresence>
         {open ? (
-          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="section-container mt-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-soft md:hidden">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="section-container mt-2 rounded-2xl border border-slate-200 bg-white/95 p-5 shadow-soft backdrop-blur md:hidden"
+          >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
-                <a key={link} href={`#${link.toLowerCase()}`} className="text-sm font-medium text-slate-700" onClick={() => setOpen(false)}>
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase()}`}
+                  className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+                  onClick={() => setOpen(false)}
+                >
                   {link}
                 </a>
               ))}
