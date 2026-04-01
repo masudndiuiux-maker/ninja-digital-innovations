@@ -26,14 +26,15 @@ export function Navbar() {
           scrolled || open ? 'border-slate-200 bg-white/95 shadow-soft backdrop-blur' : 'border-transparent bg-transparent'
         }`}
       >
-        <nav className="flex items-center justify-between gap-4 py-3 md:py-4">
-          <Link href="/" className="flex min-w-0 items-center">
+        <nav className="flex min-h-[5rem] items-center justify-between gap-4 py-3 md:min-h-[5.5rem] md:py-4">
+          <Link href="/" className="flex min-w-0 flex-1 items-center md:flex-none">
             <Image
               src="/logo-wordmark.svg"
               alt="Ninja Digital Innovations logo"
-              width={320}
-              height={90}
-              className="h-11 w-auto sm:h-12 md:h-14"
+              width={360}
+              height={102}
+              sizes="(max-width: 768px) 220px, 360px"
+              className="h-12 w-auto max-w-[13.5rem] object-contain sm:h-14 sm:max-w-[15rem] md:h-16 md:max-w-[18rem]"
               priority
             />
           </Link>

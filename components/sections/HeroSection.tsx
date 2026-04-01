@@ -1,8 +1,17 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
+import { Bot, BrainCircuit, Cpu, Network, Sparkles } from 'lucide-react';
 import { GradientButton } from '@/components/ui/GradientButton';
 import { StatsStrip } from '@/components/sections/StatsStrip';
+
+const heroIcons = [
+  { Icon: BrainCircuit, className: 'left-[8%] top-28 hidden md:flex', delay: 0 },
+  { Icon: Cpu, className: 'right-[11%] top-32 hidden lg:flex', delay: 1.6 },
+  { Icon: Network, className: 'left-[14%] bottom-32 hidden lg:flex', delay: 0.9 },
+  { Icon: Bot, className: 'right-[16%] bottom-28 hidden md:flex', delay: 2.1 },
+  { Icon: Sparkles, className: 'right-[32%] top-24 hidden xl:flex', delay: 1.2 }
+] as const;
 
 export function HeroSection() {
   const reduce = useReducedMotion();
@@ -38,6 +47,30 @@ export function HeroSection() {
         transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_38%,_rgba(3,67,84,0.18),_transparent_26%),radial-gradient(circle_at_22%_72%,_rgba(38,112,127,0.16),_transparent_22%),radial-gradient(circle_at_78%_68%,_rgba(3,67,84,0.12),_transparent_20%)]"
       />
+      {heroIcons.map(({ Icon, className, delay }, index) => (
+        <motion.div
+          key={index}
+          aria-hidden="true"
+          animate={
+            reduce
+              ? undefined
+              : {
+                  y: [0, -14, 0],
+                  opacity: [0.3, 0.55, 0.3],
+                  rotate: [0, 4, -4, 0]
+                }
+          }
+          transition={{
+            duration: 8 + index,
+            delay,
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+          className={`pointer-events-none absolute -z-10 items-center justify-center rounded-2xl border border-brand-400/20 bg-white/45 p-3 text-brand-500 shadow-soft backdrop-blur ${className}`}
+        >
+          <Icon className="h-7 w-7" strokeWidth={1.8} />
+        </motion.div>
+      ))}
       <div className="section-container pb-16">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-brand-400">Digital Innovation Studio</p>
