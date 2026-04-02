@@ -29,8 +29,8 @@ export function Navbar() {
                 <Image
                   src="/logo-wordmark.svg"
                   alt="Ninja Digital Innovations logo"
-                  width={320}
-                  height={90}
+                  width={560}
+                  height={211}
                   className="h-11 w-auto sm:h-12 md:h-14"
                   priority
                 />
