@@ -29,9 +29,10 @@ export function Navbar() {
                 <Image
                   src="/logo-wordmark.svg"
                   alt="Ninja Digital Innovations logo"
-                  width={320}
-                  height={90}
-                  className="h-11 w-auto sm:h-12 md:h-14"
+                  width={560}
+                  height={211}
+                  sizes="(max-width: 640px) 148px, (max-width: 768px) 168px, (max-width: 1024px) 192px, 216px"
+                  className="h-auto w-[9.25rem] sm:w-[10.5rem] md:w-[12rem] lg:w-[13.5rem]"
                   priority
                 />
               </Link>
