@@ -27,7 +27,7 @@ export function Navbar() {
             <nav className="flex items-center justify-between gap-4 py-3 md:py-4">
               <Link href="/" className="flex min-w-0 items-center">
                 <Image
-                  src="/logo-wordmark.svg"
+                  src="/logo.svg"
                   alt="Ninja Digital Innovations logo"
                   width={560}
                   height={211}
